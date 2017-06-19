@@ -1,0 +1,30 @@
+Guardbox is an asynchronous daemon that can run and supervise several programs running simultaneously. It is made to run programs in a sandbox. There are 4 scripts: 
+
+- install.sh
+- run.sh
+- cleanup.sh
+- uninstall.sh
+
+## Isolation and restrictions
+
+- Filesystem access - chroot
+- Disk space - chroot + tmpfs
+- Sending signals - guarddog(seccomp)
+- Forking processes - guarddog(seccomp)
+- Memory - ulimit
+- CPU time - ulimit, guardboxd
+- Network access - guarddog(seccomp), iptables rules
+- Syscalls filtering - guarddog(seccomp)
+- Environment variables - ? 
+- File descriptors - ? 
+
+## Prequisites
+
+- add users
+- create /var/guardboxes/...
+- libseccomp-dev
+- golang
+- guarddog
+- sudoers rules
+- iptables rules
+

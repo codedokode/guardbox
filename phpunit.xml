@@ -1,0 +1,13 @@
+<phpunit 
+    bootstrap="vendor/autoload.php"
+    beStrictAboutTestSize="true">
+    <testsuites>
+        <testsuite>
+            <directory>Tests</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <ini name="error_reporting" value="-1"/>
+        <ini name="display_errors" value="On"/>
+    </php>
+</phpunit>
