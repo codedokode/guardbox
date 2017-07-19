@@ -1,5 +1,7 @@
 **This project is not working yet.**
 
+[![Build Status](https://travis-ci.org/codedokode/guardbox.svg?branch=master)](https://travis-ci.org/codedokode/guardbox)
+
 Guardbox is an asynchronous daemon that can supervise several child processes running simultaneously. It is made to run programs in sandboxes. 
 
 It can have HTTP interface to accept tasks to execute.
