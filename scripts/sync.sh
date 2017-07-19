@@ -10,4 +10,4 @@ then
     exit 1
 fi
 
-rsync -r -v . "$1":/tmp/gd/
+rsync --exclude=.git -r -v . "$1":/tmp/gd/

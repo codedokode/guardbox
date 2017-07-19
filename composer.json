@@ -1,5 +1,6 @@
-{
+{    
     "require": {
+        "php": ">=5.6",
         "react/http": "~0.4",
         "react/promise": "~2.0",
         "react/child-process": "~0.3",
@@ -9,7 +10,7 @@
     },
     "require-dev": {
         "symfony/filesystem": "*",
-        "phpunit/phpunit": "~5.7"
+        "phpunit/phpunit": "^5.7"
     },
     "autoload": {
         "psr-4": {

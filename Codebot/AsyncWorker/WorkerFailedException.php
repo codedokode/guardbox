@@ -1,6 +1,6 @@
 <?php
 
-namespace Codebot\Worker;
+namespace Codebot\AsyncWorker;
 
 /**
  * Recoverable worker error that allows to start a new worker

@@ -1,6 +1,6 @@
 <?php
 
-namespace Codebot\Worker;
+namespace Codebot\AsyncWorker;
 
 use Codebot\LoggerTrait;
 use React\EventLoop\LoopInterface;

@@ -2,12 +2,12 @@
 
 namespace Tests;
 
+use Codebot\AsyncWorker\Supervisor;
+use Codebot\AsyncWorker\WorkerConfig;
+use Codebot\AsyncWorker\WorkerTask;
 use Codebot\Stream2\MemorySink;
 use Codebot\Util\ProcessHelper;
 use Codebot\Util\PromiseUtil;
-use Codebot\Worker\Supervisor;
-use Codebot\Worker\WorkerConfig;
-use Codebot\Worker\WorkerTask;
 use React\EventLoop\StreamSelectLoop;
 use React\Promise as PromiseFunction;
 use React\Promise\PromiseInterface;
@@ -205,7 +205,7 @@ class SupervisorTest extends \PHPUnit\Framework\TestCase
         $this->assertTrue(PromiseUtil::isCompleted($resultPromise));
         $result = PromiseUtil::peekValue($resultPromise);
         $this->assertNotNull($result);
-        $this->assertInstanceOf('Codebot\Worker\WorkerTaskResult', $result);
+        $this->assertInstanceOf(Codebot\AsyncWorker\WorkerTaskResult::class, $result);
 
         if ($expectSignalled) {
             $this->assertTrue($result->wasKilledBySignal());

@@ -1,7 +1,8 @@
 <?php
 
-namespace Codebot\Worker;
+namespace Codebot\AsyncWorker;
 
+use Codebot\AsyncWorker\WorkerFailedException;
 use Codebot\LoggerTrait;
 use Codebot\Stream2\MemorySink;
 use Codebot\Task;
@@ -9,7 +10,6 @@ use Codebot\Util\DeferredWithThrow;
 use Codebot\Util\ProcessHelper;
 use Codebot\Util\PromiseUtil;
 use Codebot\Util\PromiseWithThrow;
-use Codebot\Worker\WorkerFailedException;
 use React\ChildProcess\Process;
 use React\EventLoop\LoopInterface;
 use React\Promise as PromiseFunctions;

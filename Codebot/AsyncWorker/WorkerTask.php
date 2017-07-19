@@ -1,6 +1,6 @@
 <?php
 
-namespace Codebot\Worker;
+namespace Codebot\AsyncWorker;
 
 use React\Stream\Stream;
 
